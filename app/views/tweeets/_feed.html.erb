@@ -6,16 +6,15 @@
             </p>
         </figure>
         <div class="media-content">
-        
+            <%= render 'form'  %>
         </div>
     </article>
-</div>
 
 <% @tweeets.each do |tweeet| %>
     <div class="box">
         <article class="media">
             <div class="media-left">
-                    <img src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
+                    <img class="image" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
                 </figure>
             </div>
             <div class="media-content">
@@ -41,3 +40,4 @@
         </article>
     </div>
 <% end %>
+</div>
