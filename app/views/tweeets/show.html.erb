@@ -1,9 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Tweeet:</strong>
-  <%= @tweeet.tweeet %>
-</p>
-
-<%= link_to 'Edit', edit_tweeet_path(@tweeet) %> |
-<%= link_to 'Back', tweeets_path %>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="box">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <%= gravatar_image_tag(@tweeet.user.email, size: 64, alt: @tweeet.user.name) %>
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                <strong><%= @tweeet.user.name %></strong><br />
+                <small><%= @tweeet.user.username %></small><br/>
+                <p><%= @tweeet.tweeet %></p>
+                <div class="field is-grouped">
+                  <p class="control">
+                    <%= link_to 'Edit', edit_tweeet_path(@tweeet),class: "button is-info" %>
+                  </p>
+                  <p class="control">
+                    <%= link_to 'Back', tweeets_path,class: "button is-danger" %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
