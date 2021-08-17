@@ -9,9 +9,9 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
+  <body onload="destroyNotice('notice_wrapper');">
     <% if flash[:notice] %>
-      <div class="notification is-primary global-notification">
+      <div class="notification is-primary global-notification" id="notice_wrapper">
         <p class="notice"><%= notice %></p>
       </div>
     <% elsif flash[:alert] %>
@@ -56,5 +56,11 @@
       </div>
     </nav>
     <%= yield %>
+    <script>
+      notice = document.getElementById('notice_wrapper');
+      removeNotice = setTimeout(function () {
+      notice.remove();
+        }, 3000);
+    </script>
   </body>
 </html>
