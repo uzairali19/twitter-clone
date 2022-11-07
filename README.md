@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Re-Former
+# Twitter Clone
 
 > This is an example of a CRUD app using rails. It is a twitter clone essentially that works as a blog post but with user authentication system. So, rails tells the user if they are registered and can tweet or not. The main features of the app is that all the functions work dynamically using forms. A user is able to create, edit, delete or view a user. Since it is to test backend logic styling is not the main emphasis of this project. Please follow the steps to get your local copy and play around. Happy Coding!!!
 
